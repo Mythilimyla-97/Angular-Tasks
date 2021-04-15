@@ -1,0 +1,17 @@
+<h4>ngClass</h4>
+
+<div [ngClass]=" 'classStyle' ">
+  Attribute Directive - ngClass (1)
+</div>
+<br>
+
+<button (click)="flag = !flag">Change</button><br><br>
+<div [ngClass]=" flag ? 'primary' : 'secondary'">
+  Attribute Directive - ngClass (2)
+</div>
+
+
+<h4>ngStyle</h4>
+<div [ngStyle]="style">
+  Attribute Directive - ngStyle
+</div>

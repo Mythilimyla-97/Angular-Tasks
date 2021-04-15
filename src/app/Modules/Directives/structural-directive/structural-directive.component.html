@@ -1,0 +1,26 @@
+<h4>NgIF</h4>
+<button (click)="clickme()">{{buttonName}}</button>
+<div *ngIf="show">
+  <ul>
+    <li>Component Directive</li>
+    <li>Structural Directive</li>
+    <li>Attribute Directive</li>
+  </ul>
+</div>
+
+
+<h4>NgFor</h4>
+<ul>
+  <li *ngFor="let fruits of fruits">{{fruits.name}}</li>
+</ul>
+
+
+<h4>NgSwitch</h4>
+<div [ngSwitch]="ngSwitch">
+  <p *ngSwitchCase="1"> Selected : 1</p>
+  <p *ngSwitchCase="2">Selected : 2</p>
+  <p *ngSwitchCase="3"> Selected : 3</p>
+  <p *ngSwitchCase="4"> Selected : 4</p>
+  <p *ngSwitchCase="5"> Selected : 5</p>
+  <p *ngSwitchDefault>default</p>
+</div>
