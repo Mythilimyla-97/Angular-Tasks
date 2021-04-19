@@ -1,0 +1,39 @@
+<h3>Date Pipe</h3>
+<p>{{todayDate}}</p>
+<p>{{todayDate | date}}</p>
+<p>{{todayDate | date:"dd-MMM-yyyy" }}</p>
+<p>{{todayDate | date:'fullDate'|uppercase}}</p>
+<p>{{todayDate | date:'fullDate'}}</p>
+
+<br>
+<hr>
+
+<h3>Currency Pipe</h3>
+<p>{{currency}}</p>
+<p>{{currency | currency: 'EUR'}}</p>
+<p>{{currency | currency:'EUR':'code'}}</p>
+<p>{{currency | currency: 'INR'}}</p>
+<p>{{currency | currency:'INR':'code'}}</p>
+
+<br>
+<hr>
+
+<h3>Percent Pipe</h3>
+<p>{{ 0.123456 | percent }}</p>
+<p>{{ 0.126456 | percent }}</p>
+
+<br>
+<hr>
+
+<h3>Case Pipe</h3>
+<p>{{ "Angular Developer" | lowercase }}</p>
+<p>{{ "Angular Developer" | uppercase }}</p>
+<p>{{ "Angular Developer" | titlecase }}</p>
+
+<br>
+<hr>
+
+<h3>JSON Pipe</h3>
+<p>{{employees | json}}</p>
+
+<br><hr>

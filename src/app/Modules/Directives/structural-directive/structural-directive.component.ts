@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StructuralDirectiveComponent implements OnInit {
 
 buttonName = 'Show';
-show = false;
+show = true;
 //hide:any;
 
 fruits = [
