@@ -17,10 +17,6 @@ import { PipeComponent } from './Modules/Pipes/pipe/pipe.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CustomPipeComponent } from './Modules/Pipes/custom-pipe/custom-pipe.component';
 import { AgePipe } from './Modules/Pipes/age.pipe';
-import { InputComponent } from './Modules/Input/input/input.component';
-import { ParentComponent } from './Modules/Input/parent/parent.component';
-import { ChildComponent } from './Modules/Input/child/child.component';
-
 
 @NgModule({
   declarations: [
@@ -37,10 +33,7 @@ import { ChildComponent } from './Modules/Input/child/child.component';
     PipeComponent,
     PagenotfoundComponent,
     CustomPipeComponent,
-    AgePipe,
-    InputComponent,
-    ParentComponent,
-    ChildComponent,
+    AgePipe
   ],
   imports: [
     BrowserModule,
