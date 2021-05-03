@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:'pipe',component:PipeComponent},
   {path:'io', component:InputOutputComponent},
   {path:'vc',component:ViewChildComponent},
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {path:'**',component:PagenotfoundComponent},
 
 ];
