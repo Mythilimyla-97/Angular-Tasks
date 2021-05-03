@@ -7,6 +7,8 @@ import { ViewChildComponent } from './Modules/component-interaction/view-child/v
 import { DirectivesComponent } from './Modules/Directives/directives/directives.component';
 import { PipeComponent } from './Modules/Pipes/pipe/pipe.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api.component';
+import { UserComponent } from './User-Service/user/user.component';
 
 const routes: Routes = [
   {path:'',component:AppComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path:'pipe',component:PipeComponent},
   {path:'io', component:InputOutputComponent},
   {path:'vc',component:ViewChildComponent},
+  {path:'user',component:UserComponent},
+  {path:'userapi',component:UserRestAPIComponent},
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {path:'**',component:PagenotfoundComponent},
 

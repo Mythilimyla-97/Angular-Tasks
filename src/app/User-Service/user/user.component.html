@@ -1,0 +1,19 @@
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designatiom</th>
+        <th>City</th>
+        <th>Mobile</th>
+    </tr>
+    <tr *ngFor="let users of user">
+        <td> {{ users.id }} </td>
+        <td> {{ users.name }} </td>
+        <td> {{ users.designation }} </td>
+        <td> {{ users.city }} </td>
+        <td> {{ users.mobile }} </td>
+    </tr>
+</table>
+
+<br><br>
+

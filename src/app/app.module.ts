@@ -28,6 +28,9 @@ import { VcParentComponent } from './Modules/viewChild/vc-parent/vc-parent.compo
 import { VcChildComponent } from './Modules/viewChild/vc-child/vc-child.component';
 import { ViewChildComponent } from './Modules/component-interaction/view-child/view-child.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './User-Service/user/user.component';
+import { UserserviceService } from './Service/userservice.service';
+import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,9 @@ import { HttpClientModule } from '@angular/common/http';
     InputOutputComponent,
     VcParentComponent,
     VcChildComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    UserComponent,
+    UserRestAPIComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +67,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
