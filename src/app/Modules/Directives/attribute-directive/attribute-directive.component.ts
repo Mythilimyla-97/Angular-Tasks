@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributeDirectiveComponent implements OnInit {
 
-  flag: boolean = true;
+  flag: boolean = false;
 
 style={
-  color:'red',
+  color:'blue',
 }
   constructor() { }
 

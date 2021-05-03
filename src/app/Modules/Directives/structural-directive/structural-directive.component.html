@@ -1,6 +1,6 @@
 <h4>NgIF</h4>
 <button (click)="clickme()">{{buttonName}}</button>
-<div *ngIf="show">
+<div *ngIf="boolean">
   <ul>
     <li>Component Directive</li>
     <li>Structural Directive</li>
@@ -11,12 +11,12 @@
 
 <h4>NgFor</h4>
 <ul>
-  <li *ngFor="let fruits of fruits">{{fruits.name}}</li>
+  <li *ngFor="let i of fruits">{{i.name}}</li>
 </ul>
 
 
 <h4>NgSwitch</h4>
-<div [ngSwitch]="ngSwitch">
+<div [ngSwitch]="case">
   <p *ngSwitchCase="1"> Selected : 1</p>
   <p *ngSwitchCase="2">Selected : 2</p>
   <p *ngSwitchCase="3"> Selected : 3</p>

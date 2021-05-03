@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,16 @@ import { PipeComponent } from './Modules/Pipes/pipe/pipe.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CustomPipeComponent } from './Modules/Pipes/custom-pipe/custom-pipe.component';
 import { AgePipe } from './Modules/Pipes/age.pipe';
+import { ParentComponent } from './Modules/input/parent/parent.component';
+import { ChildComponent } from './Modules/input/child/child.component';
+import { CustomPipe } from './Modules/input/custom.pipe';
+import { OutputChildComponent } from './Modules/Output/output-child/output-child.component';
+import { OutputParentComponent } from './Modules/Output/output-parent/output-parent.component';
+import { InputOutputComponent } from './Modules/component-interaction/input-output/input-output.component';
+import { VcParentComponent } from './Modules/viewChild/vc-parent/vc-parent.component';
+import { VcChildComponent } from './Modules/viewChild/vc-child/vc-child.component';
+import { ViewChildComponent } from './Modules/component-interaction/view-child/view-child.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,12 +44,23 @@ import { AgePipe } from './Modules/Pipes/age.pipe';
     PipeComponent,
     PagenotfoundComponent,
     CustomPipeComponent,
-    AgePipe
+    AgePipe,
+    ParentComponent,
+    ChildComponent,
+    CustomPipe,
+    OutputChildComponent,
+    OutputParentComponent,
+    InputOutputComponent,
+    VcParentComponent,
+    VcChildComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

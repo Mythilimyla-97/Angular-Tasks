@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StructuralDirectiveComponent implements OnInit {
 
 buttonName = 'Show';
-show = true;
+boolean = true;
 //hide:any;
 
 fruits = [
@@ -19,15 +19,15 @@ fruits = [
   {name:'Orange'},
 ]
 
-ngSwitch="5"
+case="10"
 
   constructor() { }
 
   ngOnInit(): void {
   }
 clickme(){
-  this.show = !this.show
-  if(this.show)
+  this.boolean = !this.boolean
+  if(this.boolean)
   this.buttonName = 'Hide'
   else
   this.buttonName = 'Show'

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BuiltInComponent implements OnInit {
 
   todayDate :Date= new Date ();
+  
   currency="200"
   constructor() { }
 
