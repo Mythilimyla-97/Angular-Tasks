@@ -1,0 +1,48 @@
+<h1>Crud Operations</h1>
+<br>
+<h3>GET Method</h3>
+<table class="table">
+    <tr>
+        <th>Post ID</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th> Body</th>
+    </tr>
+    <tr *ngFor="let i of post">
+        <td> {{ i.postId }} </td>
+        <td> {{ i.id }} </td>
+        <td> {{ i.name }} </td>
+        <td> {{ i.email }} </td>
+        <td> {{ i.body }} </td>
+    </tr>
+</table>
+
+<br><br>
+
+<h3>GET with PARAMETERS Method</h3>
+<table class="table">
+    <tr>
+        <th>Post ID</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th> Body</th>
+    </tr>
+    <tr *ngFor="let i of postbyId">
+        <td> {{ i.postId }} </td>
+        <td> {{ i.id }} </td>
+        <td> {{ i.name }} </td>
+        <td> {{ i.email }} </td>
+        <td> {{ i.body }} </td>
+    </tr>
+</table>
+
+<br><br>
+
+<h3>POST Method</h3>
+
+<p> ID : {{postData.id}}</p>
+<p> Title : {{postData.title}}</p>
+<p> Body : {{postData.body}}</p>
+<p> User ID : {{postData.userId}}</p>

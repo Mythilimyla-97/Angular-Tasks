@@ -31,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './User-Service/user/user.component';
 import { UserserviceService } from './Service/userservice.service';
 import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api.component';
+import { PostapiComponent } from './crud/postapi/postapi.component';
+import { PostapiService } from './Service/postapi.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api
     VcChildComponent,
     ViewChildComponent,
     UserComponent,
-    UserRestAPIComponent
+    UserRestAPIComponent,
+    PostapiComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,7 @@ import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserserviceService],
+  providers: [UserserviceService,PostapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

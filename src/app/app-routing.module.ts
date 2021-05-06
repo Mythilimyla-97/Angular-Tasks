@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { PostapiComponent } from './crud/postapi/postapi.component';
 import { BindingComponent } from './Modules/Bindings/binding/binding.component';
 import { InputOutputComponent } from './Modules/component-interaction/input-output/input-output.component';
 import { ViewChildComponent } from './Modules/component-interaction/view-child/view-child.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'vc',component:ViewChildComponent},
   {path:'user',component:UserComponent},
   {path:'userapi',component:UserRestAPIComponent},
+  {path:'post',component:PostapiComponent},
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {path:'**',component:PagenotfoundComponent},
 
