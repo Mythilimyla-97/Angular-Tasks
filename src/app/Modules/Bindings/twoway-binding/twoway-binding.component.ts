@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwowayBindingComponent implements OnInit {
 
-  name="Mythili";
+  name="Welcome";
   constructor() { }
 
   ngOnInit(): void {

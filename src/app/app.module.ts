@@ -8,7 +8,7 @@ import { DataBindingComponent } from './Modules/Bindings/data-binding/data-bindi
 import { PropertyBindingComponent } from './Modules/Bindings/property-binding/property-binding.component';
 import { EventBindingComponent } from './Modules/Bindings/event-binding/event-binding.component';
 import { TwowayBindingComponent } from './Modules/Bindings/twoway-binding/twoway-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BindingComponent } from './Modules/Bindings/binding/binding.component';
 import { DirectivesComponent } from './Modules/Directives/directives/directives.component';
 import { StructuralDirectiveComponent } from './Modules/Directives/structural-directive/structural-directive.component';
@@ -33,6 +33,15 @@ import { UserserviceService } from './Service/userservice.service';
 import { UserRestAPIComponent } from './User-Service/user-rest-api/user-rest-api.component';
 import { PostapiComponent } from './crud/postapi/postapi.component';
 import { PostapiService } from './Service/postapi.service';
+
+import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+
+
+import { ReactiveFormsComponent } from './Modules/reactive-forms/reactive-forms.component';
+import { MaterialComponent } from './Modules/Material/material/material.component';
+
 
 @NgModule({
   declarations: [
@@ -61,14 +70,21 @@ import { PostapiService } from './Service/postapi.service';
     ViewChildComponent,
     UserComponent,
     UserRestAPIComponent,
-    PostapiComponent
+    PostapiComponent,
+    ReactiveFormsComponent,
+    MaterialComponent,
+   
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatDividerModule
   ],
   providers: [UserserviceService,PostapiService],
   bootstrap: [AppComponent]

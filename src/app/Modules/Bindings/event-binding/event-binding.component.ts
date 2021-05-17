@@ -12,6 +12,6 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 clickme(){
-  alert("Event Binding Works")
+  alert("Event Binding Works");
 }
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  name="Mythili";
+  name="TVM";
   constructor() { }
 
   ngOnInit(): void {

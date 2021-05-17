@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyBindingComponent implements OnInit {
 
-  disabled:boolean=true;
-  src="/assets/pagenotfound.jpg";
+  disable:boolean=true;
+  source="/assets/pagenotfound.jpg";
+  w="200";
+  h="200";
   constructor() { }
 
   ngOnInit(): void {
