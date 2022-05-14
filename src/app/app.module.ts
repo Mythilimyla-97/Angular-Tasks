@@ -41,6 +41,15 @@ import {MatDividerModule} from '@angular/material/divider';
 
 import { ReactiveFormsComponent } from './Modules/reactive-forms/reactive-forms.component';
 import { MaterialComponent } from './Modules/Material/material/material.component';
+import { ChainPipeComponent } from './Modules/Pipes/chain-pipe/chain-pipe.component';
+import { ParameterizedPipeComponent } from './Modules/Pipes/parameterized-pipe/parameterized-pipe.component';
+import { OneComponent } from './Modules/VC/one/one.component';
+import { TwoComponent } from './Modules/VC/two/two.component';
+import { AuthGuard } from './Auth Guard/auth.guard';
+import { AuthService } from './Auth Guard/auth.service';
+import { AddUserComponent } from './User-Service/add-user/add-user.component';
+import { UnsaveGuard } from './User-Service/unsave.guard';
+import { PromiseObservableComponent } from './Modules/Promise Observables/promise-observable/promise-observable.component';
 
 
 @NgModule({
@@ -73,6 +82,12 @@ import { MaterialComponent } from './Modules/Material/material/material.componen
     PostapiComponent,
     ReactiveFormsComponent,
     MaterialComponent,
+    ChainPipeComponent,
+    ParameterizedPipeComponent,
+    OneComponent,
+    TwoComponent,
+    AddUserComponent,
+    PromiseObservableComponent,
    
   ],
   imports: [
@@ -86,7 +101,7 @@ import { MaterialComponent } from './Modules/Material/material/material.componen
     ReactiveFormsModule,
     MatDividerModule
   ],
-  providers: [UserserviceService,PostapiService],
+  providers: [UserserviceService,PostapiService,AuthGuard,AuthService,UnsaveGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

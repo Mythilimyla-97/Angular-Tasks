@@ -17,8 +17,25 @@ export class UserserviceService {
       {id:1,name:'Sandhya',designation:'Dot Net Developer',city:'Coimbatore',mobile:9876543210},
     ]
   }
+
   getUserApi(){
     return this.http.get("https://jsonplaceholder.typicode.com/users")
   }
+
+  getUser(id:number){
+    return this.http.get("https://jsonplaceholder.typicode.com/users/"+id)
+  }
+
+  getAll(){
+    return [
+      {id:1,name:"Roshini",Designation:"Developer"},
+      {id:2,name:"Kavitha",Designation:"Developer"},
+      {id:3,name:"Vijay",Designation:"Developer"},
+      {id:4,name:"Devi",Designation:"Developer"},
+      {id:5,name:"priya",Designation:"Developer"}
+    ];
+  }
 }
+
+
 

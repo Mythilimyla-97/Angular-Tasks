@@ -18,5 +18,10 @@ export class PostapiService {
   postAll(params: any){
     return this.http.post("https://jsonplaceholder.typicode.com/posts",params);
   }
-    
+  putAPI(params: any){
+    return this.http.put("https://jsonplaceholder.typicode.com/posts/1",params);
+  } 
+  deleteAPI(){
+    return this.http.delete("https://jsonplaceholder.typicode.com/posts/1")
+  }
 }

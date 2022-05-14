@@ -12,14 +12,14 @@ boolean = true;
 //hide:any;
 
 fruits = [
-  {name:'apple'},
-  {name:'mango'},
-  {name:'banana'},
-  {name:'Guava'},
-  {name:'Orange'},
+  {name:'apple', color:'red'},
+  {name:'mango', color:'yellow'},
+  {name:'banana', color:'yellow'},
+  {name:'Guava', color:'green'},
+  {name:'Orange', color:'orange'},
 ]
 
-case="10"
+case="1";
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserserviceService } from 'src/app/Service/userservice.service';
 
 @Component({
@@ -9,12 +10,16 @@ import { UserserviceService } from 'src/app/Service/userservice.service';
 export class UserRestAPIComponent implements OnInit {
   user:any[] | any;
  
-  constructor(private service:UserserviceService) { }
+  constructor(private service:UserserviceService,
+    private route:Router) { }
 
   ngOnInit(): void {
     this.service.getUserApi().subscribe((data)=>{
       this.user=data;
       console.log(this.user);
     })
+  }
+  onClick(){
+    this.route.navigate(['/adduser']);
   }
 }

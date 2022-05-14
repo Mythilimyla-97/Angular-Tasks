@@ -13,4 +13,5 @@ export class ParentComponent implements OnInit {
   }
   
   @Input() cmpy: string | any;
+
 }

@@ -27,6 +27,9 @@ export class CustomPipeComponent implements OnInit {
       dob: new Date("o5/10/2000")
     }
   ];
+
+
+  
   dob= new Date("05/10/2012")
 
 

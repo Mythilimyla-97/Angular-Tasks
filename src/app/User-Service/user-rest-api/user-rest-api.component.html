@@ -1,3 +1,8 @@
+<br><br>
+
+<button (click)="onClick()">Add User</button>
+
+
 <table class="table">
     <tr>
         <th>ID</th>
@@ -7,7 +12,7 @@
         <th>Website</th>
     </tr>
     <tr *ngFor="let users of user">
-        <td> {{ users.id }} </td>
+        <td><a [routerLink]="['/users',users.id]"> {{ users.id }} </a></td>
         <td> {{ users.name }} </td>
         <td> {{ users.username }} </td>
         <td> {{ users.website }} </td>

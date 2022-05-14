@@ -8,46 +8,31 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class ReactiveFormsComponent implements OnInit {
 
-  userForm: FormGroup | any;
-  loginForm:FormGroup | any;
-  
-  constructor( private fb: FormBuilder) { }
+  registerForm: FormGroup | any;
+    submitted = false;
 
-  ngOnInit(): void {
-    // this.userForm = this.fb.group({
-    //   userid: ['', 
-    //     Validators.required, 
-    //   ],
-    //   firstName: ['', Validators.required],
-    // })
-    this.getLoginForm()
-  }
+    constructor(private formBuilder: FormBuilder) { }
 
-  getLoginForm(){
-    this.loginForm = this.fb.group({
-     emailId:new FormControl(null,Validators.required),
-     password:new FormControl(null,Validators.required),
-    })
-  }
-  onSubmit(){
-    debugger
-  
-      console.log(this.loginForm.value)
-  
-  }
-  get f() { return this.userForm.controls; }
+    ngOnInit() {
+        this.registerForm = this.formBuilder.group({
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', [Validators.required, Validators.minLength(6)]]
+        });
+    }
 
-    // onSubmit() {
-    //     this.userForm = true;
+    // convenience getter for easy access to form fields
+    get f() { return this.registerForm.controls; }
 
-    //     // stop here if form is invalid
-    //     if (this.userForm.invalid) {
-    //         return;
-    //     }
+    onSubmit() {
+        this.submitted = true;
 
-    //     // display form values on success
-    //     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.userForm.value, null, 4));
-    // }
+        // stop here if form is invalid
+        if (this.registerForm.invalid) {
+            return;
+        }
 
-
+        alert(JSON.stringify(this.registerForm.value))
+    }
 }

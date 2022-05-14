@@ -20,6 +20,8 @@ export class PostapiComponent implements OnInit {
     this.getAllPost();
     this.getbyId();
     this.postAll();
+    this.put();
+    this.delete();
   }
 
   getAllPost(){
@@ -34,6 +36,12 @@ export class PostapiComponent implements OnInit {
     })
   }
 
+  delete(){
+    this.service.deleteAPI().subscribe((data)=>{
+      console.log("Deleted");
+    })
+  }
+
   postAll(){
     let params={
       id: 101,
@@ -42,6 +50,19 @@ export class PostapiComponent implements OnInit {
       userId: 1
     }
     this.service.postAll(params).subscribe((data)=>
+    {
+        this.postData=data;
+    })
+  }
+
+  put(){
+    let params={
+      id: 101,
+      title: 'go',
+      body: 'bar',
+      userId: 1
+    }
+    this.service.putAPI(params).subscribe((data)=>
     {
         this.postData=data;
     })

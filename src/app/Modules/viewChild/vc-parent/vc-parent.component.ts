@@ -16,7 +16,7 @@ export class VcParentComponent implements OnInit {
   }
 
   changeEvent(){
-    this.child.changeColor();
+   this.child.changeColor();
   }
 
 }
